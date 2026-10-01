@@ -1,19 +1,26 @@
 #include <stdio.h>
 
 int main(void) {
-    int num;
-    int sum = 0;        // 초기화 코드!!
-    int i;                  
+    int num1, num2;
+    char op;
+    int res;
 
-    printf("Input a integer: ");
-    scanf("%i", &num);
+    printf("enter the calculation : ");
+    scanf("%i %c %i", &num1, &op, &num2);
 
-    for (i = 0; i < num; i++) 
-    {
-        sum = sum + i +1;
+    if (op == '+') {
+        res = num1 + num2;
+        printf("%i\n", res);
+    } else if (op == '-') {
+        res = num1 - num2;
+        printf("%i\n", res);
+    } else if (op == '*') {
+        res = num1 * num2;
+        printf("%i\n", res);
+    } else if (op == '/') {
+        res = num1 / num2;
+        printf("%i\n", res);
     }
-
-    printf("The result is %i\n", sum);
 
     return 0;
 }
