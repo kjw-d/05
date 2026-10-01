@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-int main(void) 
-{
-    int count = 0;
-    char c;
+int main(void) {
+    int num;
+    int sum = 0;        // 초기화 코드!!
+    int i;                  
 
-    printf("Input a string: ");
-    while ((c = getchar()) != '\n') 
+    printf("Input a integer: ");
+    scanf("%i", &num);
+
+    for (i = 0; i < num; i++) 
     {
-        if (c >= '0' && c <= '9') 
-            count++;
+        sum = sum + i +1;
     }
 
-    printf("there are %i digits\n", count);
+    printf("The result is %i\n", sum);
 
     return 0;
 }
